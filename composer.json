@@ -1,0 +1,40 @@
+{
+    "name": "bbroger/buscador_cursos_alura",
+    "description": "Projeto que busca cursos de PHP no site da Alura",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Alura\\FindCourses\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "bbroger1",
+            "email": "bb.roger@rcssoft.com.br"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "*",
+        "symfony/dom-crawler": "*",
+        "symfony/css-selector": "*",
+        "psr/log": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "squizlabs/php_codesniffer": "*",
+        "phan/phan": "*"
+    },
+    "scripts": {
+        "test": "phpunit tests\\TestBuscadorDeCursos.php",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cs",
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
+    }
+}
