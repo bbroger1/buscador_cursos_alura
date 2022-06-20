@@ -1,3 +1,4 @@
+#!/usr/bin/env php
 <?php
 require 'vendor/autoload.php';
 
@@ -12,5 +13,5 @@ $search_engine = new FindEngine($client, $crawler);
 $courses = $search_engine->find('/cursos-online-programacao/php');
 
 foreach ($courses as $curse) {
-    echo $curse . PHP_EOL;
+    $curse . PHP_EOL;
 }
