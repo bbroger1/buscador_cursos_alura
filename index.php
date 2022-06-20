@@ -13,5 +13,5 @@ $search_engine = new FindEngine($client, $crawler);
 $courses = $search_engine->find('/cursos-online-programacao/php');
 
 foreach ($courses as $curse) {
-    $curse . PHP_EOL;
+    echo $curse . PHP_EOL;
 }
